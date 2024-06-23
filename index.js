@@ -24,10 +24,14 @@ const sumArray = (nums) => nums.reduce((acc, num) => acc + num, 0);
 console.log(sumArray([5, 25, 45, 25, 66, 35, 24, 57, 6, 7, 56]));
 
 // 7) Write a function named ‘sortArray’ that takes an array of numbers and returns a new array sorted in ascending order.
-const sortArray = (nums) => nums.sort((a, b) => a - b);
+const sortArray = (nums) => {
+  let newArray = [...nums];
+  newArray.sort((a, b) => a - b);
+  return newArray;
+};
 console.log(sortArray([5, 25, 45, 25, 66, 35, 24, 57, 6, 7, 56]));
 
 // 8) Write a function named ‘capitalizeFirstLetter’ that takes a string and returns the same string with the first letter capitalized. Ex-  console.log(capitalizeFirstLetter("hello"));  // Output:  "Hello"
 const capitalizeFirstLetter = (str) =>
-  str.length > 0 ? str[0].toUpperCase() + str.slice(1) : '';
+  str.length > 0 ? str[0].toUpperCase() + str.slice(1) : "";
 console.log(capitalizeFirstLetter("javscript is Awesome"));
